@@ -1,1 +1,2 @@
-`docker build -t contrast/mulletbot . ; docker push contrast/mulletbot:latest`
+# contrastbot
+A place to host ContrastBot - Contrasts Slack bot
