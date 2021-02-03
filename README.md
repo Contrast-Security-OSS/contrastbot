@@ -1,2 +1,2 @@
 # contrastbot
-A place to host ContrastBot - Contrasts Slack bot
+A place to host ContrastBot - Contrasts Slack bot 
