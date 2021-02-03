@@ -3,7 +3,7 @@ name: Push package to ghcr.io
 on:
   push:
     branches:
-      - "DEVOPS-7285-move-contrastbot"
+      - "main"
 
 jobs:
    push_to_registry:
