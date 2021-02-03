@@ -3,7 +3,7 @@ name: Push package to ghcr.io
 on:
   push:
     branches:
-      - "main"
+      - "DEVOPS-7285-move-contrastbot"
 
 jobs:
    push_to_registry:
@@ -20,3 +20,4 @@ jobs:
           registry: ghcr.io
           repository: contrast-security-inc/contrastbot
           tag_with_ref: true
+          tags: latest
