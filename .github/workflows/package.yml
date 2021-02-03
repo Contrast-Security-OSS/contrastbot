@@ -20,3 +20,4 @@ jobs:
           registry: ghcr.io
           repository: contrast-security-inc/contrastbot
           tag_with_ref: true
+          tags: latest
