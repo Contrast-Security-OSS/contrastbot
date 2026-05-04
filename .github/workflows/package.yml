@@ -5,15 +5,23 @@ on:
     branches:
       - "main"
 
+permissions:
+  contents: read
+
 jobs:
    push_to_registry:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        with:
+          egress-policy: audit
+
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
       - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@3e7a4f6646880c6f63758d73ac32392d323eaf8f # v1.1.2
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.CR_PAT }}
